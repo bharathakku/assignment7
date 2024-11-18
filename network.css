@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1000px; /* Make the body take up the full viewport height */
+  background-image: url('./img/network/WWE-WrestleMania.jpg'); /* Your background image */
+  background-size: cover; /* Make sure the image covers the full viewport */
+  background-position: center; /* Center the image */
+  position: relative; /* Allow absolute positioning for the shadow */
+}
+
+body::before {
+  content: ""; /* Empty content to create the pseudo-element */
+  position: absolute; /* Position it absolutely to cover the entire body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Shadow overlay with semi-transparent black */
+  z-index: -1; /* Make sure the shadow is behind the content */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8); /* Apply shadow to all four sides */
+}
+
+#navcust{
+  background-color: rgb(45, 45, 45);
+
+}
+.nav-link{
+  color: rgb(192, 185, 185);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.image-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust position to perfectly center */
+  width: 90%;
+  height: 80%;
+ 
+}
+
+h1{
+  font-weight: bold;
+  font-size: 50px;
+  color: white;
+}
+p{
+  font-size: 18px;
+  color: white; 
+}
+h3{
+  font-size: 20px;
+  color: white; 
+}
